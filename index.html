@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Para Ti ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- PANTALLA 1 -->
+<section id="pantalla1">
+
+<h1>
+HOLA TATY,<br>
+TENGO ALGO QUE DECIRTE... ❤️
+</h1>
+
+<button onclick="iniciarSorpresa()">
+PRESIONA AQUI PARA ESCUCHAR 🎵
+</button>
+
+<audio id="audioRomantico" loop>
+<source src="musica/teamo.mp3" type="audio/mpeg">
+</audio>
+
+</section>
+
+
+<!-- PANTALLA 2 -->
+<section id="pantalla2" style="display:none;">
+
+<h1 id="typing"></h1>
+
+<button id="continuar2"
+onclick="mostrarFotos()"
+style="display:none;">
+
+CONTINUAR ❤️
+
+</button>
+
+</section>
+
+
+<!-- PANTALLA 3 -->
+<section id="pantalla3" style="display:none;">
+
+<h1>NUESTROS RECUERDOS 💕</h1>
+
+<div class="timeline">
+
+<p onclick="mostrarRecuerdo('images/foto6.jpg')">
+💖 UN DIA MUY ESPECIAL 05/12/2025
+</p>
+
+<p onclick="mostrarRecuerdo('images/foto1.jpg')">
+💖 NUESTROS MOMENTOS JUNTOS
+</p>
+
+<p onclick="mostrarRecuerdo('images/foto5.jpg')">
+📸 LAS FOTOS QUE JAMÁS OLVIDARÉ
+</p>
+
+</div>
+
+<!-- Este sigue mostrando las fotos automáticamente -->
+<img id="slideshow" src="images/foto1.jpg">
+
+<button onclick="mostrarFinal()">
+CONTINUAR ❤️
+</button>
+
+</section>
+
+
+<!-- PANTALLA 4 -->
+<section id="pantalla4" style="display:none;">
+
+<h1>¿PODEMOS VOLVER A INTENTARLO? 💍</h1>
+
+<button class="si" onclick="perdono()">
+SI 💖
+</button>
+
+<button id="noBtn" class="no">
+NO...
+</button>
+
+<h2 id="mensajeFinal"></h2>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>

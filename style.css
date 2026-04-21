@@ -1,0 +1,193 @@
+body{
+text-align:center;
+font-family:Arial;
+margin:0;
+padding:20px;
+overflow-x:hidden;
+overflow-y:auto;
+position:relative;
+background:#000;
+z-index:1;
+}
+
+/* FONDO MOSAICO */
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+z-index:0;
+
+background-image:
+url("images/foto1.jpg"),
+url("images/foto2.jpg"),
+url("images/foto3.jpg"),
+url("images/foto4.jpg"),
+url("images/foto5.jpg"),
+url("images/foto6.jpg");
+
+background-size:33.33% 50%;
+
+background-position:
+0% 0%,
+50% 0%,
+100% 0%,
+0% 100%,
+50% 100%,
+100% 100%;
+
+background-repeat:no-repeat;
+
+/* SOLO OSCURECER */
+filter:brightness(30%);
+}
+
+/* CAPA OSCURA */
+body::after{
+content:"";
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.35);
+
+z-index:1;
+
+pointer-events:none;
+}
+
+/* BOTONES */
+button{
+font-size:28px;
+padding:25px 35px;
+margin:25px;
+border:none;
+border-radius:20px;
+position:relative;
+z-index:2;
+}
+
+.si{
+background:#ff4d6d;
+color:white;
+}
+
+.no{
+background:gray;
+color:white;
+}
+
+/* TITULOS */
+h1{
+font-size:42px;
+color:white;
+text-shadow:0 0 12px rgba(0,0,0,.8);
+position:relative;
+z-index:2;
+}
+
+h2{
+font-size:28px;
+padding:20px;
+color:white;
+text-shadow:0 0 10px rgba(0,0,0,.8);
+position:relative;
+z-index:2;
+}
+
+/* SLIDESHOW */
+#slideshow{
+width:400px;
+max-width:90%;
+height:auto;
+border-radius:20px;
+margin-top:30px;
+box-shadow:0 0 20px rgba(255,255,255,.2);
+position:relative;
+z-index:2;
+}
+
+/* TIMELINE */
+.timeline{
+font-size:30px;
+margin-top:50px;
+color:white;
+text-shadow:0 0 10px rgba(0,0,0,.8);
+position:relative;
+z-index:2;
+}
+
+.timeline p{
+cursor:pointer;
+margin:25px;
+}
+
+/* CARTA */
+.carta{
+background:rgba(255,255,255,.92);
+padding:30px;
+margin:40px auto;
+width:80%;
+max-width:700px;
+border-radius:20px;
+position:relative;
+z-index:2;
+}
+
+/* FOTO RECUERDOS */
+#fotoRecuerdo{
+width:400px;
+max-width:90%;
+height:auto;
+margin-top:30px;
+border-radius:20px;
+box-shadow:0 0 20px rgba(255,255,255,.3);
+position:relative;
+z-index:2;
+}
+
+/* CORAZONES */
+.heart{
+position:absolute;
+font-size:30px;
+animation:fall 8s linear infinite;
+z-index:2;
+}
+
+@keyframes fall{
+from{
+transform:translateY(-100px);
+}
+
+to{
+transform:translateY(100vh);
+}
+}
+
+/* MOVIL */
+@media (max-width:768px){
+
+h1{
+font-size:34px;
+}
+
+h2{
+font-size:24px;
+}
+
+button{
+font-size:24px;
+padding:20px 28px;
+}
+
+.timeline{
+font-size:24px;
+}
+
+.carta{
+width:90%;
+padding:20px;
+}
+
+}
